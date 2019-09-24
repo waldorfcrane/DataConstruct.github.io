@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+	
+	<title>Blog - DataConstruct Inc.</title>
+
+	<meta property="og:url" content="https://www.dataconstruct.ca/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="DataConstruct Inc.">
+	<meta property="og:description" content="Providing key DevOps consulting expertise around implementing tools, infrastructure, automation and processes that will allow employees to collaborate, iterate and execute on building amazing products.">
+	<meta property="og:image" content="/facebookShare.jpg">
+	
+	<link rel="shortcut icon" href="https://www.dataconstruct.ca/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://www.dataconstruct.ca/favicon.ico" type="image/x-icon">
+	
+	<script defer="" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700|Roboto:300,400,400i,700,700i&display=swap" rel="stylesheet">
+	<link href="https://www.dataconstruct.ca/stylez.css" rel="stylesheet">
+
+
+</head>
+
+<body class="interiorPage">
+	<div class="header">
+		<div class="content">
+			<div class="logo">
+				<a href="/"><img src="https://www.dataconstruct.ca/DataConstructInc.png" alt=""></a>
+			</div>
+			<nav>
+				<a href="/">Home</a>
+			</nav>
+		</div>
+	</div>
+	
+	<div class="container">
+		
+		<div class="content blog">
+
+			
+			<div class="blogEntry">
+				<p class="date">September 23, 2019</p>
+				<h2>Making The Case For Simpler Processes</h2>
+				<img src="samantha-gades-BlIhVfXbi9s-unsplash.jpg">
+				<h5><small>Originally posted on <a href="https://www.linkedin.com/pulse/making-case-simpler-processes-paul-everton/">LinkedIn</a></small></h5>
+				<br />
+
+				<p>Code is only valuable when it's in production. Until then, it's a liability. It is essential that we focus both on quickly delivering high quality software to our users and improving our processes to make that delivery easier.</p>
+				<p>High performing IT organizations recognize that software development is a process that begins with an idea, and finishes with code in the hands of their users, and tries to optimize the complete process, not just parts. </p>
+				<h3>What is a High Performing IT Organization?</h3>
+				<p>High performing IT Organizations are surpassing their competition in leaps and bounds. They ship product and change dramatically in a 6 month period. Facebook's Employee Handbook has an interesting quote on the subject[0]:</p>
+				<p class="testi">The Quick Shall Inherit the Earth. Fast is better than slow. While slow is adding unnecessary embellishments, fast is out in the world. And that means fast can learn from experience while slow can only theorize. Those who ship quickly can improve quickly. So fast doesn't just win the race. It gets a head start for the next one.</p>
+				<p>These organizations do everything in their power to unlock the velocity of the developer. They are committed to breaking down the non-value add barriers that traditionally separate a dev from production. One of their prime directives is velocity, and they pursue it with complete commitment.</p>
+				<h3>Why be a High Performing IT Organization?</h3>
+				<p>Shipping code fast isn't the goal of being a high performing IT organization, it's just one of the ways we get to the place we want to be.</p>
+				<p>If you look at the statistics, High performing IT organizations:
+					<br/>- Have a failure rate less than 15%
+					<br/>- Spend 20% more time on planned work
+					<br/>- Spend 22% less on unplanned work
+					<br/>- Have a Mean Time To Recovery (recovering from an issue in Production) of less then an hour
+					<br/>- Ship product 24 times more often.
+				</p>
+				<p>By contrast, lower performing IT Organizations have a failure rate of 30~45% and will have a Mean Time To Recovery of a day or more [1].</p>
+				<p>High performing IT organizations spend more of their time on value producing work, and less time firefighting.</p>
+				<h3>How do they do it?</h3>
+				<p>One of the most fundamental principles is to simplify processes that get in the way of providing value to our customer.</p>
+				<p>There are some key practices that separate these high performing IT Organizations from others. They heavily invest in:
+					<br/>Continuous Integration so that new code is always tested against the latest version
+					<br/>Continuous Deployment so that they are used to releasing software quickly to let it realize its value
+					<br/>Test Automation rather than manual gates so that developers receive rapid feedback and quality is assured.
+				</p>
+				<p>By contrast some common industry practices have been not shown to correlate with being a high performing IT organization, and in some cases, are negatively correlated:
+					<br/>Having the Quality Assurance Teams creating tests instead of having developers own them
+					<br/>On demand test environments rather than automated unit tests that run locally and without external dependencies.
+				</p>
+				<p>These organizations have invested in processes that allow them to ship product with the least amount of friction with quick feedback loops while sharing the responsibility of stability [1]. The result is twofold: One, the developer feels a bigger sense of responsibility for production stability. Secondly, the developer gets faster feedback about code changes, and has a greater ability to understand the problem and fix it quickly, even before production.</p>
+				<h3>Why do these practices create High Performance?</h3>
+				<p>This starts to make sense when we look at the total cost of fixing bugs during various stages of the SDLC.</p>
+				<p class="testi">The cost of bugs increases by orders of magnitude the longer it takes to discover [2].</p>
+				<p>NASA had found there was a 7X increase in cost when a bug was found at the Integration testing phase (systems talking to other systems) and a 100X increase in cost when found in production [3]. Organizations have also found that humans are typically bad at identifying issues at code review time [4].</p>
+				<p>High performing IT Organizations are able to ship more product because they attain massive savings through tight feedback loops that run as close as possible to the developer at the time of coding, directly on their workstation. They are also able to change the purpose of the code review from "does this code work?" to "does it provide value to the end customer?" [4].</p>
+				<h3>How to do Tight Feedback Loops right</h3>
+				<p>Having fast and reliable feedback loops that run close to the developer is possible. Etsy invested heavily in analyzing their testing methods. They approached it with a divide and conquer strategy. Etsy's core test suite runs 4500 checks within a minute. Their integration tests stub out dependent services. Their smoke tests are basic CURL checks against a deployed application. They only rely on their End to End tests to check a few of their core use cases [5].</p>
+				<p>Github has built a test suite that runs in 2-3 minutes and validates their entire application [6]. Many high traffic teams (Maps as an example) at Google don't rely on any End to End testing, and in certain cases where they did have End to End tests, it was only to validate basic configuration of the application and did not validate functionality. They also found that having separate "QA" teams or "QA" environments disincentivized their teams from thinking about Quality as they could defer the cost [7] [8].</p>
+				<p>AirBNB started to use stubbed downstream services within their testing strategy while building out their microservice architecture [9]. These types of approaches to simplifying their processes to have quick feedback loops have allowed these Organizations to ship software faster and with higher stability.</p>
+				<h3>What Can We Do To Get There?</h3>
+				<p>We need to incentivize fast testing that is close to the dev, and disincentivize processes that slow us down. Google had good success using this concept. They had teams build client libraries to their microservice APIs with built in support for testing. This allowed Front End and Mobile teams to easily test their own applications against the libraries without the need to do HTTP calls into the actual API endpoints.</p>
+				<p>The client library model is an example of a method that incentivized fast consistent tests that ran close to the developer while giving high feedback and less bugs all while disincentivizing reliance on additional environments for testing [10]. Also note that reliance on additional environments for validation disincentivizes teams from shipping product as it's more cumbersome to validate the product which leads to risky big bang deployments.</p>
+				<h3>The Hidden Costs Of Validation Environments</h3>
+				<p>We also need to consider the costs involved in supporting our validation methods. Google has invested many resources in building tooling that analyzes their end to end "on demand testing" in order to automatically classify and remove tests that consistently fail for no reason [11]. They then realized that the costs involved in supporting these validation methods became overly costly due to the infrastructure and tooling required for it's "on demand" nature and moved towards speedier and more reliable validation methods [12]. It also becomes increasingly costly to get Production like environments as we need to support tooling and configuration to do things like share data, mock services etc [13].</p>
+				<p>It can also be costly at the human level. The core use-case for a microservices architecture is to make our software modular to drop the cost of communication as each team can operate individually and ship product whenever they want. Communication costs increase at a rate of n^2, where n is the amount of people involved within the conversation [14]. As we add more environments and additional layers of process, we inherently force in more required communication for a change to be pushed out. Teams have to manage those environments and ensure their code gets into those environments and then communicate those changes.</p>
+				<p>Github realized that they needed to remove all friction from their process to ensure they could continue shipping product at a high rate [15]. Initially they had multiple environments with ad-hoc options to deploy any code to any of those subset of environments. They then moved to only Staging or Production deployments as it simplified communication, incentivized good practices and was less complex to manage [16]. They viewed it as making the steps in their process wider, giving faster feedback loops, instead of adding additional layers to the process [17].</p>
+				<h3>In Closing</h3>
+				<p>There are many techniques that can also aid us in shipping product to production as fast as possible. Techniques like feature flagging allow us to ship unfinished code to production and only allow certain users to see that functionality. Many Organizations like Facebook use this technique to ship new Products so that when the actual launch occurs it is as simple as turning a light switch on. This gives us the benefit of ensuring that new features works with the current product and also gets real world load. We can also use libraries that allow us to run multiple code paths in a single call to validate functionality and performance concerns with production load. Github was able to use this technique to rewrite their entire GIT backend in real time on Production servers [18].</p>
+				<p>We need to continue to invest in techniques and processes that allow use to continue our rapid rate of shipping product. It will allow us to produce more value to our end customers and have less unplanned work. We also have to realize that at the end of the day we are human and we will make mistakes which will lead to failure. No amount of process will avoid issues in Production. This means we need to adopt techniques and procedures that allow us to ship fixes to Production as fast as possible with high confidence.</p>
+				<h3>References</h3>
+				<p>
+					<br/>[0]http://gizmodo.com/heres-facebooks-little-red-book-a-guide-to-zuckerbergi-1706298694
+					<br/>[1]http://www.slideshare.net/nicolefv/does-2016-sciencing-the-crap-out-of-devops
+					<br/>[2]https://www.nist.gov/sites/default/files/documents/director/planning/report02-3.pdf
+					<br/>[3]https://www.nist.gov/sites/default/files/documents/director/planning/report02-3.pdf
+					<br/>[4]https://blog.fullstory.com/what-we-learned-from-google-code-reviews-arent-just-for-catching-bugs-b125a13aa292#.xkh303re1
+					<br/>[5]https://codeascraft.com/2011/04/20/divide-and-concur/
+					<br/>[6]https://zachholman.com/posts/deploying-software
+					<br/>[7]http://businessofsoftware.org/2016/06/rock-solid-software-testing-without-hiring-an-army-trish-khoo-google-bos2015/
+					<br/>[8]https://testing.googleblog.com/2016/11/what-test-engineers-do-at-google.html
+					<br/>[9]http://nerds.airbnb.com/testing-at-airbnb/
+					<br/>[10]https://testing.googleblog.com/2017/02/discomfort-as-tool-for-change.html
+					<br/>[11]https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html
+					<br/>[12]https://testing.googleblog.com/2016/11/what-test-engineers-do-at-google.html
+					<br/>[13]https://blog.acolyer.org/2016/09/12/on-designing-and-deploying-internet-scale-services/
+					<br/>[14]https://research.fb.com/wp-content/uploads/2017/01/paper_icse-savor-2016.pdf
+					<br/>[15]https://zachholman.com/posts/how-github-works/
+					<br/>[16]https://zachholman.com/talk/how-github-no-longer-works/
+					<br/>[17]https://zachholman.com/talk/move-fast-break-nothing/
+					<br/>[18]https://githubengineering.com/move-fast/
+				</p>
+				<p>Thanks to Sean Walberg and Cian Whalley for editing this document. This would have been a jumbled mess without their help!</p>
+		</div>
+		
+		
+		<div class="bloglist content">
+			<h2>More blogs</h2>
+			
+			<div class="blogs">
+
+				<div class="blogItem">
+					<img src="spacex-uj3hvdfQujI-unsplash.jpg">
+					<p class="date">September 23, 2019</p>
+					<h3><a href="/blog/building-scalable-build-deployment-pipelines/">Building Scalable Build and Deployment Pipelines</a></h3>
+					<p>Build and Deployment Pipelines are not a sexy subject within our industry. It's often an afterthought relegated to the last minute and cobbled together. It's also extremely hard to find resources from people who've been in the trenches and seen what has worked and what hasn't. This article is an attempt at sharing the knowledge I have from building Build and Deployment Pipelines that have deployed applications that served billions of requests daily.</p>
+					<p>You may not agree with everything that is documented here and that's ok! If you are going to deviate, deviate with purpose!</p>
+
+
+
+					<p><a href="/blog/building-scalable-build-deployment-pipelines/">Read More...</a></p>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+	<footer>
+		<div class="content">
+			<img src="DataConstructInc-white.png" alt="">
+			<p>&copy; 2019</p>
+		</div>
+	</footer>
+</body></html>
