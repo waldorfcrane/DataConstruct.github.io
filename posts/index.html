@@ -1,0 +1,40 @@
+---
+layout: posts
+title: "Posts"
+---
+<div class="container">
+<div class="header">
+    <div class="content">
+        <div class="logo">
+            <a href="/"><img src="{{ "/assets/img/DataConstructInc.png" | relative_url }}" alt=""></a>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/posts">Posts</a>
+        </nav>
+    </div>
+</div>
+<div id="posts" class="bloglist content">
+    <h2>Latest Posts</h2>
+
+    <div class="blogs">
+        {% for post in site.posts limit:3 %}
+        <div class="blogItem">
+            <img src="{{ post.splash }}">
+            <p class="date">{{ post.date | date_to_string }}</p>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            {{ post.excerpt }}
+            <p><a href="{{ post.url }}">Read More...</a></p>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+</div>
+<footer>
+    <div class="content">
+        <img src="{{ "/assets/img/DataConstructInc-white.png" | relative_url }}" alt="">
+        <p>&copy; 2019</p>
+    </div>
+</footer>
+</div>

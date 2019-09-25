@@ -1,94 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-	
-	<title>DataConstruct Inc.</title>
+---
+layout: default
+title: "Home"
+---
+<div class="header">
+    <div class="content">
+        <div class="logo">
+            <img src="{{ "/assets/img/DataConstructInc.png" | relative_url }}" alt="">
+        </div>
+        <nav>
+            <a href="#testimonials">Testimonials</a>
+            <a href="/posts">Posts</a>
+        </nav>
+    </div>
+</div>
+<div class="hero">
+    <div class="content">
+        <img src="{{ "/assets/img/factory2.png" | relative_url }}" alt="Vector illustration by freepik.com/vectorpouch">
+        <h1>Providing key DevOps consulting expertise around implementing tools, infrastructure, automation and processes that will allow employees to collaborate, iterate and execute on building amazing products.</h1>
+    </div>
+</div>
 
-	<meta property="og:url" content="https://www.dataconstruct.ca/">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="DataConstruct Inc.">
-	<meta property="og:description" content="Providing key DevOps consulting expertise around implementing tools, infrastructure, automation and processes that will allow employees to collaborate, iterate and execute on building amazing products.">
-	<meta property="og:image" content="/facebookShare.jpg">
-	
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	
-	<script defer="" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-		
-	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700|Roboto:300,400,400i,700,700i&display=swap" rel="stylesheet">
-	
-	<link href="stylez.css" rel="stylesheet">
+<div class="container">
+    <div class="social content">
+        <a href="https://www.linkedin.com/in/evertonpaul/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/PatternPaul"><i class="fab fa-twitter"></i></a>
+    </div>
 
+    <div id="testimonials" class="content">
+        <h2>Testimonials</h2>
+        <div class="testimonials">
+            <p class="testi">I've worked and collaborated with many IT professionals over the years, and Paul is extraordinary. He's a highly-talented developer, a great communicator, and a detail-oriented project manager. Paul's commitment to process management/implementation, automation, and sustainable thinking gives project teams tremendous confidence in the product development, and in his leadership. I hope to get the opportunity to work with Paul again very soon. <br /> Chris Robin ( RRC )</p>
+        </div>
+    </div>
+</div>
+<div id="posts" class="bloglist content">
+    <h2>Latest Posts</h2>
 
-</head>
+    <div class="blogs">
+        {% for post in site.posts limit:3 %}
+        <div class="blogItem">
+            <img src="{{ post.splash }}">
+            <p class="date">{{ post.date | date_to_string }}</p>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            {{ post.excerpt }}
+            <p><a href="{{ post.url }}">Read More...</a></p>
+        </div>
+        {% endfor %}
+    </div>
 
-<body>
-	<div class="header">
-		<div class="content">
-			<div class="logo">
-				<img src="DataConstructInc.png" alt="">
-			</div>
-			<nav>
-				<a href="#posts">Posts</a>
-				<a href="#testimonials">Testimonials</a>
-			</nav>
-		</div>
-	</div>
-	
-	<div class="hero">
-		<div class="content">
-			<img src="factory2.png" alt="Vector illustration by freepik.com/vectorpouch">
-			<h1>Providing key DevOps consulting expertise around implementing tools, infrastructure, automation and processes that will allow employees to collaborate, iterate and execute on building amazing products.</h1>
-		</div>
-	</div>
-	
-	<div class="container">
-		<div class="social content">
-			<a href="https://www.linkedin.com/in/evertonpaul/"><i class="fab fa-linkedin"></i></a>
-			<a href="https://twitter.com/PatternPaul"><i class="fab fa-twitter"></i></a>
-		</div>
-		
-		<div id="testimonials" class="content">
-			<h2>Testimonials</h2>
-			<div class="testimonials">
-				<p class="testi">I've worked and collaborated with many IT professionals over the years, and Paul is extraordinary. He's a highly-talented developer, a great communicator, and a detail-oriented project manager. Paul's commitment to process management/implementation, automation, and sustainable thinking gives project teams tremendous confidence in the product development, and in his leadership. I hope to get the opportunity to work with Paul again very soon. <br /> Chris Robin ( RRC )</p>
-			</div>
-		</div>
-	</div>
-	<div id="posts" class="bloglist content">
-		<h2>Latest Posts</h2>
-
-		<div class="blogs">
-			<div class="blogItem">
-				<img src="samantha-gades-BlIhVfXbi9s-unsplash.jpg">
-				<p class="date">September 23, 2019</p>
-				<h3><a href="/blog/making-the-case-for-simpler-processes/">Making The Case For Simpler Processes</a></h3>
-				<p>Code is only valuable when it's in production. Until then, it's a liability. It is essential that we focus both on quickly delivering high quality software to our users and improving our processes to make that delivery easier.</p>
-				<p>High performing IT organizations recognize that software development is a process that begins with an idea, and finishes with code in the hands of their users, and tries to optimize the complete process, not just parts. </p>
-
-				<p><a href="/blog/making-the-case-for-simpler-processes/">Read More...</a></p>
-			</div>
-			<div class="blogItem">
-				<img src="spacex-uj3hvdfQujI-unsplash.jpg">
-				<p class="date">September 23, 2019</p>
-				<h3><a href="/blog/building-scalable-build-deployment-pipelines/">Building Scalable Build and Deployment Pipelines</a></h3>
-				<p>Build and Deployment Pipelines are not a sexy subject within our industry. It's often an afterthought relegated to the last minute and cobbled together. It's also extremely hard to find resources from people who've been in the trenches and seen what has worked and what hasn't. This article is an attempt at sharing the knowledge I have from building Build and Deployment Pipelines that have deployed applications that served billions of requests daily.</p>
-				<p>You may not agree with everything that is documented here and that's ok! If you are going to deviate, deviate with purpose!</p>
-
-
-
-				<p><a href="/blog/building-scalable-build-deployment-pipelines/">Read More...</a></p>
-			</div>
-
-		</div>
-
-	</div>
-	</div>
-	<footer>
-		<div class="content">
-			<img src="DataConstructInc-white.png" alt="">
-			<p>&copy; 2019</p>
-		</div>
-	</footer>
-</body></html>
+</div>
+</div>
+<footer>
+    <div class="content">
+        <img src="{{ "/assets/img/DataConstructInc-white.png" | relative_url }}" alt="">
+        <p>&copy; 2019</p>
+    </div>
+</footer>
