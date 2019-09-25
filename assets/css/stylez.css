@@ -11,6 +11,7 @@ h1 { font-weight: 300; font-size: 2.5em; margin-bottom: 1rem; }
 h2 {font-weight: 300; margin-bottom: .5rem; text-transform: uppercase; letter-spacing: .075em;}
 h2:before {content:""; display: inline-block; width: .75em; height: .75em; background: url(/assets/img/DataConstructInc.png); background-size: cover; margin-right:.25em;}
 h3, h3 a {font-weight: 400; margin-bottom: .5rem; font-size: 1.2em;}
+h4 { font-weight: 700; }
 
 p:not(.date) + h2 { margin-top: 3rem; }
 p:not(.date) + h3 { margin-top: 2rem; }
