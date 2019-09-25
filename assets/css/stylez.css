@@ -15,11 +15,13 @@ h3, h3 a {font-weight: 400; margin-bottom: .5rem; font-size: 1.2em;}
 p:not(.date) + h2 { margin-top: 3rem; }
 p:not(.date) + h3 { margin-top: 2rem; }
 
-p {margin-bottom: 1rem; font-size: .9em;line-height: 1.75em;}
+p, li {margin-bottom: 1rem; font-size: .9em;line-height: 1.75em;}
 
 ul, ol { margin: 1rem 0 1rem 2rem; }
-li { margin-bottom: 1rem; }
+li { margin-bottom: .25rem; }
 ol li ol li { list-style-type: lower-alpha; }
+
+pre { white-space: pre-wrap; padding: 1rem; margin-bottom: 1rem; background: rgba(0,0,50,.1); }
 
 .content { max-width: 1000px; margin: 0 auto; padding: 1rem; }
 
